@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex White — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0c0f; --bg2:#111318; --bg3:#181b22; --bg4:#1e2229;
+    --border:rgba(255,255,255,0.08); --border2:rgba(255,255,255,0.12);
+    --text:#e8eaf0; --text2:#9aa0b2; --text3:#5a6070;
+    --accent:#c8a96e; --accent2:#e4c990; --accent-dim:rgba(200,169,110,0.12);
+    --blue:#7098d8; --green:#78b886;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;line-height:1.6;font-weight:400;}
+
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(11,12,15,0.92);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;}
+  .topbar a.back{color:var(--accent);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:0.04em;}
+  .topbar .dl{font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#0b0c0f;
+    background:var(--accent);padding:8px 18px;border-radius:3px;text-decoration:none;transition:background 0.2s;}
+  .topbar .dl:hover{background:var(--accent2);}
+
+  .wrap{max-width:880px;margin:0 auto;padding:60px 40px 100px;}
+
+  /* HEADER */
+  .resume-head{border-bottom:1px solid var(--border);padding-bottom:32px;margin-bottom:40px;}
+  .resume-head h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,6vw,64px);line-height:1;margin-bottom:14px;}
+  .resume-head .contact{font-family:'DM Mono',monospace;font-size:13px;color:var(--text2);letter-spacing:0.02em;display:flex;flex-wrap:wrap;gap:18px;}
+  .resume-head .contact a{color:var(--text2);text-decoration:none;}
+  .resume-head .contact a:hover{color:var(--accent);}
+
+  /* SUMMARY */
+  .summary{font-size:18px;line-height:1.7;color:var(--text);font-weight:300;
+    border-left:3px solid var(--accent);padding-left:24px;margin-bottom:48px;}
+  .summary strong{font-weight:500;color:var(--accent2);}
+
+  /* SECTIONS */
+  .sec{margin-bottom:44px;}
+  .sec-title{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:24px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+
+  /* EXPERIENCE ITEM */
+  .item{margin-bottom:32px;}
+  .item-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:4px;}
+  .item-role{font-family:'DM Serif Display',serif;font-size:21px;color:var(--text);}
+  .item-meta{font-family:'DM Mono',monospace;font-size:12px;color:var(--text3);letter-spacing:0.02em;}
+  .item-org{font-size:14px;color:var(--accent);margin-bottom:12px;font-weight:500;}
+  .item ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .item li{font-size:15px;color:var(--text2);line-height:1.6;padding-left:20px;position:relative;}
+  .item li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:1px;background:var(--accent);opacity:0.6;}
+  .item li strong{color:var(--text);font-weight:500;}
+
+  /* SKILLS */
+  .skill-row{margin-bottom:20px;}
+  .skill-label{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px;}
+  .skill-pills{display:flex;flex-wrap:wrap;gap:6px;}
+  .pill{font-family:'DM Mono',monospace;font-size:11px;padding:4px 10px;background:var(--bg3);
+    border:1px solid var(--border);border-radius:3px;color:var(--text2);letter-spacing:0.02em;}
+
+  /* PROJECTS mini */
+  .proj{margin-bottom:24px;}
+  .proj-name{font-size:16px;font-weight:500;color:var(--text);margin-bottom:2px;}
+  .proj-meta{font-family:'DM Mono',monospace;font-size:11px;color:var(--text3);margin-bottom:8px;letter-spacing:0.02em;}
+  .proj-desc{font-size:14px;color:var(--text2);line-height:1.6;}
+
+  /* EDUCATION */
+  .edu-block{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:24px 28px;}
+  .edu-deg{font-family:'DM Serif Display',serif;font-size:20px;color:var(--text);margin-bottom:4px;}
+  .edu-meta{font-size:14px;color:var(--text2);}
+  .edu-meta .gpa{color:var(--accent);font-weight:500;}
+  .edu-extra{font-size:13px;color:var(--text3);margin-top:10px;}
+
+  @media (max-width:640px){
+    .topbar{padding:14px 20px;}
+    .wrap{padding:40px 20px 80px;}
+    .item-head{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="back">&larr; Back to portfolio</a>
+  <a href="Alex_White_Resume.docx" download class="dl">Download PDF/Word</a>
+</div>
+
+<div class="wrap">
+
+  <div class="resume-head">
+    <h1>Alexander White</h1>
+    <div class="contact">
+      <span>Minneapolis, MN</span>
+      <a href="mailto:alexander.white@du.edu">alexander.white@du.edu</a>
+      <span>(651) 263-2545</span>
+      <a href="https://www.linkedin.com/in/alexanderwhite13/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+
+  <p class="summary">
+    I've maintained precision aircraft systems for the Marine Corps, graduated top of my class as an EMT,
+    built a <strong>$10M production program</strong> from nothing, and I'm finishing a business analytics
+    degree in the <strong>top 10% of my class</strong>. Different fields, one constant: do it right the
+    first time, every time — no exception. Relocating to Minneapolis and open to travel.
+  </p>
+
+  <!-- EXPERIENCE -->
+  <div class="sec">
+    <div class="sec-title">Professional Experience</div>
+
+    <div class="item">
+      <div class="item-head">
+        <span class="item-role">Customer Service Associate (Sales)</span>
+        <span class="item-meta">Aug 2025 – Present</span>
+      </div>
+      <div class="item-org">Waterway Carwash — Colorado</div>
+      <ul>
+        <li>Serve as the direct liaison between Waterway's membership product and its customers, converting <strong>13% of 700+ daily interactions</strong> into new memberships through genuine, consultative face-to-face sales.</li>
+        <li><strong>350+ total membership sales</strong> since August 2025, averaging $62 of an $80 maximum monthly value — customers consistently choosing premium tiers based on trust built in the conversation.</li>
+        <li>Sustaining greater than 0.5 sales per hour as a consistent performance floor across high-volume customer traffic.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span class="item-role">Lead Butcher</span>
+        <span class="item-meta">Nov 2021 – Mar 2023</span>
+      </div>
+      <div class="item-org">Gaylord Rockies — Colorado</div>
+      <ul>
+        <li>Built the hotel's butcher program from the ground up as its <strong>first and sole operator</strong> — designed the end-to-end production operation and served as the primary liaison between the program and 17 executive chefs across all hotel outlets.</li>
+        <li>Conducted daily coordination with each culinary outlet to deliver custom-spec protein products aligned to individual menu requirements — managing demand planning and production simultaneously across a 10,000+ guest resort.</li>
+        <li>Managed a <strong>$2.9M protein inventory</strong>, implemented yield optimization through scrap repurposing, and <strong>generated $10.7M in direct revenue</strong> in the program's first year of operation.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span class="item-role">Emergency Medical Technician / IV Tech</span>
+        <span class="item-meta">2017 – 2021</span>
+      </div>
+      <div class="item-org">Action Care Ambulance</div>
+      <ul>
+        <li>Served as the communication hub on every call — coordinating with police, fire, and medical control while managing patient care on scene, then delivering structured handoffs to hospital staff under time pressure.</li>
+        <li>Operated as the liaison between field conditions and clinical decision-makers — translating real-time situational data into actionable information for medical control and receiving teams on every run.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <span class="item-role">RQ-7B UAV Technician & Small Arms Instructor</span>
+        <span class="item-meta">2012 – 2017</span>
+      </div>
+      <div class="item-org">U.S. Marine Corps</div>
+      <ul>
+        <li>Served as Plane Captain and primary technical authority for the RQ-7B UAV system — owned the full operational lifecycle including maintenance, repair, recovery, inspection, and fueling, while briefing flight commanders on system status and go/no-go recommendations.</li>
+        <li>Led and developed a maintenance crew as their direct supervisor — responsible for crew training, performance, and safety around the aircraft, while coordinating with pilots to diagnose and resolve in-mission system issues.</li>
+        <li>Certified Small Arms Instructor who independently adapted training delivery shooter-to-shooter — designing and facilitating <strong>1,200 hours of instruction that brought 9,600 Marines to full mission readiness</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="sec">
+    <div class="sec-title">Skills & Impact</div>
+    <div class="skill-row">
+      <div class="skill-label">Data Analytics & Business Intelligence</div>
+      <div class="skill-pills">
+        <span class="pill">SQLite</span><span class="pill">MSSQL</span><span class="pill">Python</span>
+        <span class="pill">R</span><span class="pill">Excel</span><span class="pill">Tableau</span>
+        <span class="pill">Power BI</span><span class="pill">VBA</span><span class="pill">Visio</span>
+        <span class="pill">Data Warehousing</span><span class="pill">ETL / Pipelines</span>
+        <span class="pill">Data Modeling</span><span class="pill">KPI Development</span>
+        <span class="pill">Predictive Modeling</span><span class="pill">Process Automation</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Business Analysis & Process Improvement</div>
+      <div class="skill-pills">
+        <span class="pill">Revenue & margin analysis</span><span class="pill">Yield optimization</span>
+        <span class="pill">Inventory & asset management</span><span class="pill">Requirements gathering</span>
+        <span class="pill">Process improvement</span>
+      </div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Communication, Leadership & Collaboration</div>
+      <div class="skill-pills">
+        <span class="pill">Stakeholder communication</span><span class="pill">Cross-functional teamwork</span>
+        <span class="pill">Instruction</span><span class="pill">Decision-making under pressure</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="sec">
+    <div class="sec-title">Analytics Projects</div>
+    <div class="proj">
+      <div class="proj-name">Sports Analytics — LA Kings Organization</div>
+      <div class="proj-meta">Spring 2025 · R, regression</div>
+      <div class="proj-desc">Built a multiple linear regression model on historical NHL trade, salary, and performance data to quantify trade value objectively — identifying Age and AAV as significant predictors (p &lt; 0.05) for a repeatable roster-valuation framework.</div>
+    </div>
+    <div class="proj">
+      <div class="proj-name">HAMA Membership Revenue Analysis & Data Mart</div>
+      <div class="proj-meta">Winter 2024 – Fall 2025 · Python, SQL, Tableau</div>
+      <div class="proj-desc">Designed and populated a normalized database (5+ entities), automated revenue/discount/retention KPIs that previously required manual reporting, and built Tableau dashboards using pre-attentive attributes to support stakeholder decisions.</div>
+    </div>
+    <div class="proj">
+      <div class="proj-name">MLB Lineup Optimizer — DraftKings</div>
+      <div class="proj-meta">Spring 2025 · Python, Pyomo/GLPK</div>
+      <div class="proj-desc">Formulated a Binary Integer Program with salary-cap and roster rules; proved contextual player adjustments outperform naive historical averages (87 vs. 51 pts) across three benchmarked strategies.</div>
+    </div>
+    <div class="proj">
+      <div class="proj-name">Global Oil Production Analysis</div>
+      <div class="proj-meta">Spring 2026 · Python, matplotlib</div>
+      <div class="proj-desc">Transformed 120+ years of unstructured country-level TWh data into a clear, decision-ready chart with colorblind-accessible design and formatted axes.</div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="sec">
+    <div class="sec-title">Education</div>
+    <div class="edu-block">
+      <div class="edu-deg">BSBA in Business Analytics</div>
+      <div class="edu-meta">University of Denver, Daniels College of Business · Expected June 2026 · <span class="gpa">GPA 3.97</span></div>
+      <div class="edu-extra">Additional: Associate of Occupational Studies (Culinary Arts) · National EMT Certification</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -424,6 +424,11 @@
     font-weight: 500;
   }
 
+  .about-text em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
   .stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -576,6 +581,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#about">About</a></li>
+    <li><a href="resume.html">Let's Talk</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -587,8 +593,9 @@
     <div class="hero-eyebrow">Analytics Portfolio</div>
     <h1>Alex <em>White</em></h1>
     <p class="hero-subtitle">
-      Business analyst who bridges complex data systems and the people who need to understand them —
-      translating technical work into decisions that stick.
+      Marine Corps UAV technician, EMT, the butcher who built a $10M program from nothing &mdash;
+      now a business analyst finishing in the top 10% of his class. One constant across every field:
+      do it right the first time, and be the person who turns complexity into a decision.
     </p>
     <div class="hero-tags">
       <span class="tag hi">BSBA Business Analytics · DU Daniels '26</span>
@@ -739,19 +746,25 @@
     <!-- Philmont Scout Ranch -->
     <div class="project-card fade-up" style="--card-accent: var(--green)">
       <span class="card-tag" style="background: rgba(120,184,134,0.08); color: var(--green); border: 1px solid rgba(120,184,134,0.2)">Survey Analytics · NLP · Client Deliverable</span>
-      <div class="card-title">Philmont Scout Ranch Staff Analysis</div>
+      <div class="card-title">Philmont Scout Ranch — Operational Analysis</div>
       <p class="card-desc">
-        Client-facing analytics project for Philmont Scout Ranch (BSA). Answered three business questions
-        using survey data: (1) Are response rates skewing results? (2) What are the pain points and pride
-        points across adult, youth, and staff segments? (3) What factors drive seasonal staff return rates?
-        Combined quantitative survey analysis with qualitative NLP to produce actionable recommendations.
+        Client-facing analytics project for Philmont Scout Ranch, a 140,000-acre Scouting America
+        high-adventure base. Working from 15 data files &mdash; including three trek surveys with 4,000+
+        responses each, a 308-response seasonal staff survey, and five years of historical
+        participation data &mdash; our team answered six business questions for the client.
+      </p>
+      <p class="card-desc">
+        Questions spanned response-rate bias, qualitative pain and pride points, seasonal staff
+        return rates, drivers of participant NPS, which backcountry camps to protect or fix, and which
+        audiences offer the best recruitment ROI. Combined quantitative survey analysis with
+        qualitative NLP, ending in a ranked set of recommendations for Philmont leadership.
       </p>
       <div class="card-stack">
         <span class="stack-pill">Python</span>
         <span class="stack-pill">pandas</span>
         <span class="stack-pill">NLP</span>
         <span class="stack-pill">Survey analysis</span>
-        <span class="stack-pill">matplotlib</span>
+        <span class="stack-pill">NPS modeling</span>
       </div>
       <a href="Philmont_Data_clean.html" class="card-link" style="color:var(--green)">View project →</a>
     </div>
@@ -849,45 +862,47 @@
 <section class="section" id="about">
   <div class="section-header fade-up">
     <span class="section-num">03</span>
-    <h2>Background</h2>
+    <h2>Why me</h2>
   </div>
   <div class="about-grid">
     <div class="about-text fade-up">
       <p>
-        I'm a graduating senior at the <strong>University of Denver's Daniels College of Business</strong>
-        completing a BSBA in Business Analytics with a 3.97 GPA. I'm relocating to Minneapolis and
-        targeting business analyst and associate consultant roles where I can bridge technical systems
-        and decision-makers.
+        Most analytics candidates can show you a model. Fewer can tell you they once held a patient&rsquo;s
+        life on the line as an <strong>EMT</strong>, kept Marine Corps aircraft mission-ready as a
+        <strong>UAV technician</strong>, or built a <strong>$10M butcher program from nothing</strong> as
+        its first and only operator. I&rsquo;ve done all three &mdash; and now I&rsquo;m finishing a
+        business analytics degree in the <strong>top 10% of my class</strong> (3.97 GPA).
       </p>
       <p>
-        Before Daniels, I spent <strong>five years in the U.S. Marines</strong> as a UAV technician
-        and small arms instructor — which built a tolerance for complexity, ambiguity, and making
-        calls with imperfect information. I also worked in large-scale hospitality operations at
-        the Gaylord Rockies and as an EMT, where the work was always client-facing and time-sensitive.
+        Those aren&rsquo;t unrelated detours. They&rsquo;re where I learned the thing that actually makes
+        an analyst valuable: how to stay calm in complexity, make the right call with imperfect information,
+        and translate what&rsquo;s happening on the ground into a decision someone can act on. A regression
+        model and a 2 a.m. ambulance call have more in common than people think &mdash; both reward
+        precision, and both punish guessing.
       </p>
       <p>
-        That background shapes how I approach analytics: I'm most useful in the space between
-        the data and the decision — translating what the model says into what the organization
-        should do. I'm not looking to disappear into a back-room pipeline. I want to be the analyst
-        in the room when the stakes are real.
+        I&rsquo;m most useful in the space between the data and the decision. I&rsquo;m not looking to
+        disappear into a back-room pipeline &mdash; I want to be the analyst in the room when the stakes
+        are real, the one who can build the model <em>and</em> explain it to the people who have to bet on it.
+        That&rsquo;s the role I&rsquo;m relocating to Minneapolis to do.
       </p>
     </div>
     <div class="stats-grid fade-up">
       <div class="stat-block">
         <div class="stat-num">3.97</div>
-        <div class="stat-label">GPA — Daniels College of Business</div>
+        <div class="stat-label">GPA &mdash; top 10% at Daniels College of Business</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">$10.7M</div>
+        <div class="stat-label">Revenue generated building a program from scratch</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">9,600</div>
+        <div class="stat-label">Marines trained to full mission readiness</div>
       </div>
       <div class="stat-block">
         <div class="stat-num">5</div>
-        <div class="stat-label">Years in U.S. Marines</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">6+</div>
-        <div class="stat-label">Analytics projects completed</div>
-      </div>
-      <div class="stat-block">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Languages — Python, R, SQL, VBA</div>
+        <div class="stat-label">Years in the U.S. Marine Corps</div>
       </div>
     </div>
   </div>
@@ -902,8 +917,9 @@
       Available June 2026 and beyond.
     </p>
     <div class="contact-links">
-      <a href="Alex_White_Resume.docx" download class="contact-btn primary">Download résumé</a>
+      <a href="resume.html" class="contact-btn primary">View r&eacute;sum&eacute;</a>
       <a href="https://www.linkedin.com/in/alexanderwhite13/" target="_blank" rel="noopener" class="contact-btn secondary">LinkedIn</a>
+      <a href="Alex_White_Resume.docx" download class="contact-btn secondary">Download résumé</a>
     </div>
   </div>
 </section>
